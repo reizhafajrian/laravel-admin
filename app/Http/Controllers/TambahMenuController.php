@@ -20,6 +20,7 @@ class TambahMenuController extends Controller
     }
     public function store(Request $request)
     {
+        dd($request);
         $titleBar="Tambah Menu";
         $menu = new TambahMenu();
         $menu->nama = $request->nama;
@@ -29,6 +30,7 @@ class TambahMenuController extends Controller
         $menu->tipe = $request->tipe;
         $menu->ketersedian = $request->ketersedian;
         $menu->save();
+        
         return view("tambahmenu",compact("titleBar"));
     }
 }

@@ -11,25 +11,13 @@ class MenuTableSeeder extends Seeder
      */
     public function run()
     {
-        App\MenuModel::create([
-            'name'=>'burger',
-            'desc'=>'burger rasa sapi'
-        ]);
-        App\MenuModel::create([
-            'name'=>'burger',
-            'desc'=>'burger rasa sapi'
-        ]);
-
-        App\MenuModel::create([
-            'name'=>'burger',
-            'desc'=>'burger rasa sapi'
-        ]);   App\MenuModel::create([
-            'name'=>'burger',
-            'desc'=>'burger rasa sapi'
-        ]);
-        App\MenuModel::create([
-            'name'=>'burger',
-            'desc'=>'burger rasa sapi'
+        App\TambahMenu::create([
+            'nama'=>'burger',
+            "gambar"=>"https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/eggs-breakfast-avocado-1296x728-header.jpg?w=1155&h=1528",
+            'desc'=>'burger rasa sapi',
+            'harga'=>"2000",
+            "tipe"=>"Makanan",
+            "ketersedian"=>"10"
         ]);
     }
 }

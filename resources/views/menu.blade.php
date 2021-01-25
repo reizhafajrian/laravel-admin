@@ -4,6 +4,7 @@ Menu
 @endSection()
 @section('css')
 <link rel="stylesheet" href="css/menu.css">
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 @section('content')
 @section('bodyclass')
@@ -29,8 +30,10 @@ class="c-app flex-row align-items-center"
                 <div class="card" style="width: 15rem;">
                     <img src="{{$data->gambar}}" alt="" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{$data->nama}}</h5>
+                        <h2 class="card-title">{{$data->nama}}</h2>
+                        <h5>Harga:Rp<span id="harga">{{$data->harga}}</span></h5>
                         <p class="card-text">{{$data->desc}}</p>
+                       
                         <div class="add-button">
                             <button type="button" class="btn btn-pill btn-primary">-</button>
                             <div class="value">0</div>
@@ -46,8 +49,8 @@ class="c-app flex-row align-items-center"
                 <div class="card">
                     <img src="{{$data->gambar}}" alt="" style="width: 15rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{$data->nama}}</h5>
-                        <p class="card-text">{{$data->desc}}</p>
+                    <h2 class="card-title">{{$data->nama}}</h2>
+                        <h5>Harga:Rp <span id="harga">{{$data->harga}}</span> </h5>
                         <div class="add-button">
                             <button type="button" class="btn btn-pill btn-primary">-</button>
                             <div class="value">0</div>

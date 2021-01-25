@@ -9,9 +9,11 @@ class element extends HTMLElement {
     render() {
         this.innerHTML = `
         <div class="menu-detail">
+  
+
         <p>${this.name}</p>
 
-            <div class="value">${this.value}</div>
+        <div class="value">${this.value}</div>
 
         <p id="total">${this.total}</p>
     </div>`

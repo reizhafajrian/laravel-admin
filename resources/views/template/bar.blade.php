@@ -65,10 +65,7 @@
     </div>
     <ul class="c-sidebar-nav">
       <li class="c-sidebar-nav-title">Admin</li>
-      <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/">
-          <svg class="c-sidebar-nav-icon">
-            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
-          </svg> Dashboard<span class="badge badge-info"></span></a></li>
+
       <li class="c-sidebar-nav-item"><a class="c-sidebar-nav-link" href="/tambahmenu">
           <svg class="c-sidebar-nav-icon">
             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>

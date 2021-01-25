@@ -1,9 +1,11 @@
 import element from "./element.js"
+
 const food = document.querySelector(".food")
 const drink = document.querySelector(".drink")
 const button = document.querySelectorAll('.btn')
 const card = document.querySelectorAll(".card")
 const btn = card[0].querySelector('.btn')
+const buttonsub = document.querySelector(".btn-success")
 let data = []
 let totalGlobal = []
 let hasildata = 0
@@ -19,22 +21,24 @@ let arraytest = []
 card.forEach(element => {
     const btn = element.querySelectorAll(".btn")
     const value = element.querySelector(".value")
-    const nama = element.querySelector("h5")
-
+    const nama = element.querySelector("h2")
+    const harga = element.querySelector("#harga")
     btn[0].onclick = () => {
         if (value.innerHTML > 0) {
             value.innerHTML = Number(value.innerText) - 1
-            tester(value.innerHTML, nama)
+            tester(value.innerHTML, nama, Number(harga.innerHTML))
 
         }
     }
     btn[1].onclick = () => {
+
         value.innerHTML = Number(value.innerText) + 1
-        tester(value.innerHTML, nama);
+        tester(value.innerHTML, nama, Number(harga.innerHTML));
+        console.log(harga.innerHTML)
     }
 
 });
-const tester = (angka, nama) => {
+const tester = (angka, nama, harga) => {
     const menunya = document.createElement("info-menu")
     const collape = document.querySelector(".collapse")
     const menunya1 = document.querySelectorAll("info-menu")
@@ -45,7 +49,7 @@ const tester = (angka, nama) => {
             data.push(nama.innerHTML)
             menunya.setAttribute("name", nama.innerHTML)
             menunya.setAttribute("value", angka)
-            menunya.setAttribute("total", `5000`)
+            menunya.setAttribute("total", harga)
             collape.appendChild(menunya)
             totalDetails()
         } else {
@@ -56,7 +60,7 @@ const tester = (angka, nama) => {
                 if (title.innerHTML === nama.innerHTML) {
 
                     menunya2.innerHTML = angka
-                    total.innerHTML = Number(5000) * Number(menunya2.innerHTML)
+                    total.innerHTML = harga * Number(menunya2.innerHTML)
                     totalDetails()
                 }
             });
@@ -64,7 +68,7 @@ const tester = (angka, nama) => {
     } else {
         data.push(nama.innerHTML)
         menunya.setAttribute("name", nama.innerHTML)
-        menunya.setAttribute("total", `5000`)
+        menunya.setAttribute("total", harga)
         menunya.setAttribute("value", angka)
         collape.appendChild(menunya)
         totalDetails()
@@ -87,3 +91,4 @@ const totalDetails = () => {
     }
 
 }
+const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');

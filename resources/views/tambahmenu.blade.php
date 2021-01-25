@@ -41,7 +41,7 @@ class="c-app flex-row align-items-center"
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Ketersedian</label>
-          <input type="number" name="ketersedian" class="form-control" id="ketersedian" placeholder="20000">
+          <input  type="number" name="ketersedian" class="form-control" id="ketersedian" placeholder="20000">
         </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
       </form>
