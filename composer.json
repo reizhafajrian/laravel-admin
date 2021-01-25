@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel",
+    "name": "laravel/admin",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
@@ -12,7 +12,6 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^6.3.1|^7.0.1",
-        "jenssegers/mongodb": "dev-develop",
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5"
     },
