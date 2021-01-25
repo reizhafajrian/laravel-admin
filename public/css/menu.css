@@ -1,0 +1,138 @@
+.c-main {
+    padding: 2rem !important;
+    padding-top: 45px !important;
+}
+
+.click-div {
+    color: black;
+}
+
+.click-div:hover {
+    color: black;
+    text-decoration: none;
+}
+
+#button-click {
+    margin-top: 1rem;
+}
+
+.layout-container {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 0px auto;
+}
+
+.container-div {
+    width: 180p;
+}
+
+.top {
+    background-color: white;
+    margin: 0 !important;
+    width: 1293px;
+    max-width: 100% !important;
+    position: fixed !important;
+    margin-top: 57px !important;
+    z-index: 2;
+}
+
+.card {
+    width: 15rem;
+    max-width: 100%;
+}
+
+.c-main {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0 !important;
+}
+
+.fit-layout {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+}
+
+.drink {
+    display: none;
+    position: relative;
+    transform: translateX(100%);
+    transition: 1s;
+}
+
+.food {
+    position: relative;
+}
+
+.total {
+    width: 1293px;
+    max-width: 100% !important;
+    background-color: white;
+    padding: 10px 0px 10px 0px !important;
+    margin: 0px !important;
+}
+
+.add-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px auto;
+}
+
+.menu-info {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu-info>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-info>div:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-infos {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.menu-infos>p {
+    margin-left: auto !important;
+    margin-right: 5px !important;
+}
+
+.show {
+    width: 100%;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.menu-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#collapse-detail {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 545px) {
+    .layout-container {
+        grid-template-columns: 1fr;
+    }
+}
