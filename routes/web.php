@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get("/menu","MenuController@index");
 Route::get('/createuser', "CreateUserController@index");
-Route::get('/regist', "CreateUserController@regist");
+Route::post('/regist', "CreateUserController@regist");
 
 Auth::routes();
 Route::get('/', 'HomeController@index');

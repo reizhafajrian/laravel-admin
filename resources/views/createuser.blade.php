@@ -19,7 +19,7 @@ class="c-app flex-row align-items-center"
                         <div class="col-md-6">
                             <div class="card mx-4">
                                 <div class="card-body p-4">
-                                    <form method="POST" action="{{ route('register') }}">
+                                    <form method="POST" action="/regist">
                                         @csrf
                                         <h1>Register</h1>
                                         <p class="text-muted">Create your account</p>
