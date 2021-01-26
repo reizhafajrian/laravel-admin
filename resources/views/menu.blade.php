@@ -1,10 +1,9 @@
 @extends("template/bar")
 @section('title')
-Menu
+Dashboard
 @endSection()
 @section('css')
 <link rel="stylesheet" href="css/menu.css">
-<meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 @section('content')
 @section('bodyclass')
@@ -24,16 +23,16 @@ class="c-app flex-row align-items-center"
     </div>
     <main class="c-main">
         <div class="fit-layout">
+
             <div class="layout-container food">
-            @foreach($collection as $data)
-               @if($data->tipe=="Makanan")
+                @foreach($collection as $data)
                 <div class="card" style="width: 15rem;">
                     <img src="{{$data->gambar}}" alt="" style="width: 15rem;">
                     <div class="card-body">
                         <h2 class="card-title">{{$data->nama}}</h2>
                         <h5>Harga:Rp<span id="harga">{{$data->harga}}</span></h5>
                         <p class="card-text">{{$data->desc}}</p>
-                       
+
                         <div class="add-button">
                             <button type="button" class="btn btn-pill btn-primary">-</button>
                             <div class="value">0</div>
@@ -41,16 +40,16 @@ class="c-app flex-row align-items-center"
                         </div>
                     </div>
                 </div>
-          
-
+                @endforeach
             </div>
-            @else
+
             <div class="layout-container drink">
+                @foreach($minuman as $minum)
                 <div class="card">
-                    <img src="{{$data->gambar}}" alt="" style="width: 15rem;">
+                    <img src="{{$minum->gambar}}" alt="" style="width: 15rem;">
                     <div class="card-body">
-                    <h2 class="card-title">{{$data->nama}}</h2>
-                        <h5>Harga:Rp <span id="harga">{{$data->harga}}</span> </h5>
+                        <h2 class="card-title">{{$minum->nama}}</h2>
+                        <h5>Harga:Rp <span id="harga">{{$minum->harga}}</span> </h5>
                         <div class="add-button">
                             <button type="button" class="btn btn-pill btn-primary">-</button>
                             <div class="value">0</div>
@@ -59,11 +58,12 @@ class="c-app flex-row align-items-center"
 
                     </div>
                 </div>
-
+                @endforeach
             </div>
+
+
         </div>
-        @endif
-        @endforeach
+
 
     </main>
     <div class="container total">
@@ -83,7 +83,7 @@ class="c-app flex-row align-items-center"
         <div id="total">0</div>
         <button type="button" class="btn btn-success">Check out</button>
     </div>
-</div>
+
 </div>
 <script src="js/food.js"></script>
 <script type="module" src="js/total.js"></script>

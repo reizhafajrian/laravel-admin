@@ -15,9 +15,11 @@ class MenuController extends Controller
     }
     public function index(){
         $data=new TambahMenu();
-        $collection=$data->all();
+        $collection=$data->where("tipe","Makanan")->get();
+        $minuman=$data->where("tipe","Makanan")->get();
+    
         $titleBar="Menu";
 
-        return view("menu",compact('titleBar',"collection"));
+        return view("menu",compact('titleBar',"collection","minuman"));
     }
 }

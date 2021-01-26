@@ -25,7 +25,7 @@ Route::get('/createuser', "CreateUserController@index");
 Route::get('/regist', "CreateUserController@regist");
 
 Auth::routes();
-// Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 Route::post('/bayar', 'BayarController@index');
 Route::get('/tambahmenu', 'TambahMenuController@index');
 Route::post('/tambahmenu', 'TambahMenuController@store');
